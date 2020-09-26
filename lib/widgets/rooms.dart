@@ -21,6 +21,7 @@
 import 'package:flutter/material.dart';
 import 'package:nfb/config/palette.dart';
 import 'package:nfb/models/models.dart';
+import 'package:nfb/widgets/widgets.dart';
 
 class Rooms extends StatelessWidget {
   final List<User> onlineUsers;
@@ -46,11 +47,13 @@ class Rooms extends StatelessWidget {
               child: _CreateRoomButton(),
             );
           }
-          return Container(
-            margin: const EdgeInsets.all(2.0),
-            height: 20.0,
-            width: 20.0,
-            color: Colors.red,
+          final User user = onlineUsers[index - 1];
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            child: ProfileAvatar(
+              imageUrl: user.imageUrl,
+              isActive: true,
+            ),
           );
         },
       ),
@@ -82,7 +85,9 @@ class _CreateRoomButton extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          const SizedBox(width: 4.0,),
+          const SizedBox(
+            width: 4.0,
+          ),
           Text("Create\nRoom"),
         ],
       ),

@@ -23,6 +23,7 @@ import 'package:flutter/painting.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:nfb/config/palette.dart';
 import 'package:nfb/data/data.dart';
+import 'package:nfb/models/models.dart';
 import 'package:nfb/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -65,6 +66,24 @@ class HomeScreen extends StatelessWidget {
             padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
             sliver: SliverToBoxAdapter(
               child: Rooms(onlineUsers: onlineUsers),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            sliver: SliverToBoxAdapter(
+              child: Stories(
+                currentUser: currentUser,
+                stories: stories,
+              ),
+            ),
+          ),
+          SliverList(
+            delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  final Post post = posts[index];
+                  return PostContainer(post: post);
+                },
+              childCount: posts.length,
             ),
           ),
         ],
