@@ -16,7 +16,6 @@
 
 ///
 /// @author nghiatc
-/// @since Sep 26, 2020
+/// @since Sep 27, 2020
  
-export 'home_screen.dart';
-export 'nav_screen.dart';
+
