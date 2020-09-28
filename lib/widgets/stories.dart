@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-import 'package:cached_network_image/cached_network_image.dart';
-
 ///
 /// @author nghiatc
 /// @since Sep 26, 2020
@@ -25,6 +23,7 @@ import 'package:flutter/painting.dart';
 import 'package:nfb/config/palette.dart';
 import 'package:nfb/models/models.dart';
 import 'package:nfb/widgets/widgets.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class Stories extends StatelessWidget {
   final User currentUser;

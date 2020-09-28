@@ -16,11 +16,9 @@
 ///
 /// @author nghiatc
 /// @since Sep 26, 2020
-
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:nfb/config/palette.dart';
-import 'package:nfb/data/data.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class ProfileAvatar extends StatelessWidget {
   final String imageUrl;

@@ -14,8 +14,6 @@
  * limitations under the License.
  */
 
-import 'package:cached_network_image/cached_network_image.dart';
-
 ///
 /// @author nghiatc
 /// @since Sep 26, 2020
